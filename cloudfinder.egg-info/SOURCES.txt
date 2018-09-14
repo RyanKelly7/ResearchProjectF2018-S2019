@@ -1,0 +1,8 @@
+setup.py
+cloudfinder/__init__.py
+cloudfinder/stuff.py
+cloudfinder.egg-info/PKG-INFO
+cloudfinder.egg-info/SOURCES.txt
+cloudfinder.egg-info/dependency_links.txt
+cloudfinder.egg-info/requires.txt
+cloudfinder.egg-info/top_level.txt

@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: cloudfinder
+Version: 0.0.1
+Summary: Software to detect clouds using allsky cameras
+Home-page: UNKNOWN
+Author: Ryan Kelly
+Author-email: rjk228@nau.edu
+License: MIT
+Description: UNKNOWN
+Keywords: Cloud Allsky Camera Detection Finder
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Scientific/Engineering :: Astronomy
+Classifier: License :: MIT
