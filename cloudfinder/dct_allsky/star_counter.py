@@ -9,8 +9,8 @@ import fits_manager
 from astropy.visualization import (ZScaleInterval, MinMaxInterval, ImageNormalize, LinearStretch)
 
 # 2 test files 2nd of higher quality, first more starts and wider view
-#filename = 'TARGET__00161.fit'
-filename = 'mscience0217.fits'
+filename = 'TARGET__00161.fit'
+# filename = 'mscience0217.fits'
 
 
 # open fits file using astropy.io fits tool
@@ -48,7 +48,7 @@ bkg = sep.Background(data)
 # subtract the background map from data
 data_sub = data-bkg
 
-print(bkg.shape)
+
 
 # Unecessary display of image data (debugging)
 '''
@@ -61,11 +61,12 @@ plt.show()
 
 background_std = np.std(data_sub)
 
-## get objects from sep.extract; counts the stars in the image (hopegully)
+## get objects from sep.extract; counts the stars in the image (hopefully)
 # argument info:
 # (data with background subtracted, minimum value (within data_sub (parameter 0)) for object detection (float),
 # minimum area to be considered as a star, ??read Documentation?? -----)
-objects = sep.extract(data_sub, 1.5*background_std, minarea = 9, gain = 3, deblend_nthresh=32, deblend_cont = 0.0005)
+objects = sep.extract(data_sub, 1.5*background_std, minarea = 9, mask = fits_manager.generate_mask([data_sub]),
+                      gain = 3, deblend_nthresh=32, deblend_cont = 0.0005)
 
 # print object information for debugging purposes
 # DEBUGGING
