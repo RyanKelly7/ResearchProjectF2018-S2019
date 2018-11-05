@@ -1,2 +1,2 @@
-from .fits_manager import *
-from .star_counter import *
+#from .fits_manager import FitsManager
+#from .star_counter import StarCounter
